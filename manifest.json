@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Hide edX Notifications",
+  "version": "0.0.1",
+  "description": "This Chrome browser extension hides the open notification pane that appears in edx courses by default.",
+   "permissions": ["scripting"],
+  "icons": {
+    "16": "images/notification-bell-16.png",
+    "32": "images/notification-bell-32.png",
+    "48": "images/notification-bell-48.png",
+    "128": "images/notification-bell-128.png"
+},
+"background": {
+    "service_worker": "scripts/background.js"
+},
+"web_accessible_resources": [
+  {
+    "resources": ["css/*.css"],
+    "extension_ids": ["nbiekcklhjnjmjohookgbejbboebbkpa"]
+    }
+  ],
+"content_scripts": [
+    {
+        "matches": [
+        "*://*.learning.edx.org/course/*"
+      ],
+      "css": ["css/global.css"]
+    }
+],
+  "host_permissions": [
+        "*://*.learning.edx.org/course/*"
+  ],
+  "action": {
+      "default_popup": "popup.html"
+  }
+
+}
