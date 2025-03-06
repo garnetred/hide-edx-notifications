@@ -1,3 +1,9 @@
 section[data-testid='sidebar-NOTIFICATIONS'] {
   display: none !important;
 }
+
+/* upgrade promo sidebar */
+
+section[data-testid='sidebar-DISCUSSIONS_NOTIFICATIONS'] {
+  display: none !important;
+}
