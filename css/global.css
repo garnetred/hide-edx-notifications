@@ -7,3 +7,15 @@ section[data-testid='sidebar-NOTIFICATIONS'] {
 section[data-testid='sidebar-DISCUSSIONS_NOTIFICATIONS'] {
   display: none !important;
 }
+
+/* section above each exercise encouraging users to upgrade to unlock each exercise */
+
+div[data-testid='lock-paywall-test-id'] {
+  display: none !important;
+}
+
+/* upgrade modal that covers the whole page */
+
+.pgn__modal-layer {
+  display: none !important;
+}
